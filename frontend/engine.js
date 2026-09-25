@@ -12,8 +12,18 @@ function getBanburyAnswer(question) {
 
       if (question.includes(phrase.toLowerCase())) {
 
+        if (currentLanguage === "hi" &&
+            typeof knowledgeBaseHindi !== "undefined" &&
+            knowledgeBaseHindi[topic]) {
+
+          return knowledgeBaseHindi[topic];
+
+        }
+
         if (knowledgeBase[topic]) {
+
           return knowledgeBase[topic];
+
         }
 
       }
@@ -22,6 +32,30 @@ function getBanburyAnswer(question) {
 
   }
 
-  return "PROBLEM:\nNot Identified\n\nMESSAGE:\nBanbury AI could not identify the problem.\n\nCONFIDENCE:\n0%";
+  if (currentLanguage === "hi") {
+
+    return `
+समस्या:
+पहचानी नहीं गई
+
+संदेश:
+Banbury AI समस्या पहचान नहीं सका
+
+विश्वास स्तर:
+0%
+`;
+
+  }
+
+  return `
+PROBLEM:
+Not Identified
+
+MESSAGE:
+Banbury AI could not identify the problem.
+
+CONFIDENCE:
+0%
+`;
+
 }
-``
