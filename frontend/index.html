@@ -123,8 +123,9 @@ function setLanguage(lang){
  
 currentLanguage = lang;
  
-alert("Language Selected : " + lang);
-
+document.getElementById("result").innerHTML =
+"Selected Language : " + lang;
+ 
 }
 
 function startVoice(){
