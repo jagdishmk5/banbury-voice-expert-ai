@@ -16,6 +16,8 @@ function getBanburyAnswer(question) {
             typeof knowledgeBaseHindi !== "undefined" &&
             knowledgeBaseHindi[topic]) {
 
+          console.log("Hindi KB Used");
+
           return knowledgeBaseHindi[topic];
 
         }
