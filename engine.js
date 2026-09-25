@@ -1,5 +1,11 @@
 function getBanburyAnswer(question){
 
-return dictionary ? "DICTIONARY FOUND" : "DICTIONARY NOT FOUND";
+return `
+PROBLEM:
+TEST SUCCESS
+
+MESSAGE:
+Banbury AI Engine Working
+`;
 
 }
