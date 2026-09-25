@@ -58,11 +58,15 @@ text-align:left;
 
 <h3>🌐 Language</h3>
 
-<button>Hindi</button>
-<button>English</button>
-<button>Marathi</button>
-<button>Telugu</button>
-<button>Tamil</button>
+<button onclick="setLanguage('hi')">Hindi</button>
+ 
+<button onclick="setLanguage('en')">English</button>
+ 
+<button onclick="setLanguage('mr')">Marathi</button>
+ 
+<button onclick="setLanguage('te')">Telugu</button>
+ 
+<button onclick="setLanguage('ta')">Tamil</button>
 
 <hr>
 
@@ -112,6 +116,16 @@ Ask a Banbury Question
 <script src="./engine.js"></script>
   
 <script>
+
+ let currentLanguage = "en";
+ 
+function setLanguage(lang){
+ 
+currentLanguage = lang;
+ 
+alert("Language Selected : " + lang);
+
+}
 
 function startVoice(){
 
