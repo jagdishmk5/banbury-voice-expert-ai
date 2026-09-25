@@ -1,43 +1,50 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Banbury Voice Expert AI</title>
+<title>Banbury Voice Expert AI</title>
 
-  <style>
-    body{
-      font-family:Arial;
-      background:#f4f7fa;
-      text-align:center;
-      margin:0;
-      padding:20px;
-    }
+<style>
+body{
+font-family:Arial;
+background:#f4f7fa;
+text-align:center;
+padding:20px;
+}
 
-    .card{
-      background:white;
-      max-width:700px;
-      margin:auto;
-      padding:20px;
-      border-radius:15px;
-      box-shadow:0 0 10px #ccc;
-    }
+.card{
+background:white;
+max-width:800px;
+margin:auto;
+padding:20px;
+border-radius:15px;
+box-shadow:0 0 10px #ccc;
+}
 
-    button{
-      padding:10px 15px;
-      margin:5px;
-      border:none;
-      background:#0078d4;
-      color:white;
-      border-radius:8px;
-    }
+button{
+padding:10px 15px;
+margin:5px;
+background:#0078d4;
+color:white;
+border:none;
+border-radius:8px;
+cursor:pointer;
+}
 
-    h1{
-      color:#0078d4;
-    }
+input{
+width:80%;
+padding:10px;
+margin:10px;
+}
 
-    .section{
-      margin-top:20px;
-    }
-  </style>
+#answer{
+background:#eef6ff;
+padding:15px;
+border-radius:10px;
+margin-top:20px;
+white-space:pre-line;
+text-align:left;
+}
+</style>
 
 </head>
 
@@ -45,43 +52,111 @@
 
 <div class="card">
 
-<h1>🎤 TEST 999 FRONTEND</h1>
+<h1>🎤 Banbury Voice Expert AI</h1>
 
 <p>Compound Hold Analysis & Tyre Impact Expert</p>
 
-<div class="section">
-<h2>🌐 Language</h2>
+<h3>🌐 Language</h3>
 
 <button>Hindi</button>
 <button>English</button>
 <button>Marathi</button>
 <button>Telugu</button>
 <button>Tamil</button>
-</div>
 
-<div class="section">
-<h2>🎤 Voice Question</h2>
-<button>Start Voice</button>
-</div>
+<hr>
 
-<div class="section">
-<h2>📄 Upload Lab Report</h2>
+<h3>⌨️ Type Question</h3>
+
+<input
+type="text"
+id="question"
+placeholder="Example : compound hard">
+
+<br>
+
+<button onclick="analyzeBanbury()">
+Analyze
+</button>
+
+<hr>
+
+<h3>🎤 Voice Question</h3>
+
+<button onclick="startVoice()">
+Start Voice
+</button>
+
+<p id="result">
+Speak something...
+</p>
+
+<hr>
+
+<h3>📄 Upload Lab Report</h3>
+
 <input type="file">
-</div>
 
-<div class="section">
-<h2>🤖 AI Analysis</h2>
+<hr>
 
-<p>Compound Hold Reason</p>
-<p>Raw Material Cause</p>
-<p>Process Cause</p>
-<p>Machine Cause</p>
-<p>Tyre Impact</p>
-<p>Corrective Action</p>
+<h2>🤖 AI Result</h2>
 
+<div id="answer">
+Ask a Banbury Question
 </div>
 
 </div>
+
+<script>
+
+function startVoice(){
+
+const SpeechRecognition =
+window.SpeechRecognition ||
+window.webkitSpeechRecognition;
+
+const recognition =
+new SpeechRecognition();
+
+recognition.lang = "hi-IN";
+
+recognition.start();
+
+recognition.onresult = function(event){
+
+let text =
+event.results[0][0].transcript;
+
+document.getElementById("result").innerHTML =
+text;
+
+document.getElementById("question").value =
+text;
+
+analyzeBanbury();
+
+};
+
+}
+
+function analyzeBanbury(){
+
+let question =
+document.getElementById("question").value;
+
+let answer =
+getBanburyAnswer(question);
+
+document.getElementById("answer").innerHTML =
+answer;
+
+}
+
+</script>
+
+../dictionary.jsscript>
+../knowledge.jsscript>
+../engine.jsscript>
 
 </body>
 </html>
