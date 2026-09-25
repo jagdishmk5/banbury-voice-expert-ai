@@ -158,24 +158,6 @@ speakAnswer();
 
 }
 
-function speakAnswer(){
-
-let text =
-document.getElementById("answer").innerText;
-
-window.speechSynthesis.cancel();
-
-let speech =
-new SpeechSynthesisUtterance(text);
-
-speech.lang = "en-IN";
-speech.rate = 1;
-speech.pitch = 1;
-
-window.speechSynthesis.speak(speech);
-
-}
-
 </script>
 
 
