@@ -1,39 +1,234 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Banbury Voice Expert AI</title>
+<title>Banbury Voice Expert AI Pro</title>
+
+<style>
+body{
+font-family:Arial;
+background:#f4f7fa;
+padding:20px;
+text-align:center;
+}
+
+.card{
+background:white;
+padding:20px;
+border-radius:15px;
+max-width:900px;
+margin:auto;
+box-shadow:0px 0px 10px #ccc;
+}
+
+button{
+padding:10px;
+margin:5px;
+background:#0078d4;
+color:white;
+border:none;
+border-radius:8px;
+}
+
+input{
+padding:10px;
+width:80%;
+margin:10px;
+}
+
+#answer{
+margin-top:20px;
+padding:15px;
+background:#eef6ff;
+border-radius:8px;
+white-space:pre-line;
+text-align:left;
+}
+</style>
+
 </head>
 
 <body>
 
-<h1>🎤 Banbury Voice Expert AI</h1>
+<div class="card">
 
-<button onclick="startVoice()">
-🎤 Start Voice
+<h1>🎤 Banbury Voice Expert AI Pro</h1>
+
+<h3>🌐 Select Language</h3>
+
+<button>Hindi</button>
+<button>English</button>
+<button>Marathi</button>
+<button>Telugu</button>
+<button>Tamil</button>
+
+<hr>
+
+<h3>⌨️ Type Question</h3>
+
+<input
+type="text"
+id="question"
+placeholder="Example : Mooney High">
+
+<br>
+
+<button onclick="analyzeBanbury()">
+Analyze
 </button>
 
-<p id="result">Speak something...</p>
+<hr>
+
+<h3>🎤 Voice Question</h3>
+
+<button onclick="startVoice()">
+Start Voice
+</button>
+
+<p id="result">
+Speak something...
+</p>
+
+<hr>
+
+<h3>📄 Upload Lab Report</h3>
+
+<input type="file">
+
+<hr>
+
+<h2>🤖 AI Result</h2>
+
+<div id="answer">
+Ask a Banbury Question
+</div>
+
+</div>
 
 <script>
 
-function startVoice() {
+function startVoice(){
 
 const SpeechRecognition =
 window.SpeechRecognition ||
 window.webkitSpeechRecognition;
 
-const recognition = new SpeechRecognition();
+const recognition =
+new SpeechRecognition();
 
-recognition.lang = "hi-IN";
+recognition.lang="hi-IN";
 
 recognition.start();
 
-recognition.onresult = function(event) {
+recognition.onresult=function(event){
 
-document.getElementById("result").innerHTML =
+let text=
 event.results[0][0].transcript;
 
+document.getElementById("result")
+.innerHTML=text;
+
+document.getElementById("question")
+.value=text;
+
 };
+
+}
+
+function analyzeBanbury(){
+
+let question=
+document.getElementById("question")
+.value
+.toLowerCase();
+
+let answer="";
+
+if(question.includes("mooney")
+|| question.includes("viscosity")){
+
+answer=
+`MOONEY / VISCOSITY
+
+Compound Hold Reason:
+Mooney Out Of Specification
+
+Raw Material Cause:
+Process Oil Low
+
+Process Cause:
+Low Dump Temperature
+
+Machine Cause:
+Oil Pump Issue
+
+Tyre Impact:
+Heat Build Up
+
+Corrective Action:
+Check Oil Dosing`;
+
+}
+
+else if(question.includes("specific gravity")
+|| question.includes("sg")){
+
+answer=
+`SPECIFIC GRAVITY
+
+Compound Hold Reason:
+SG Out Of Specification
+
+Raw Material Cause:
+Carbon Black High
+
+Process Cause:
+Wrong Weighment
+
+Machine Cause:
+Load Cell Error
+
+Tyre Impact:
+Higher Hardness
+
+Corrective Action:
+Check Carbon Addition`;
+
+}
+
+else if(question.includes("torque")){
+
+answer=
+`TORQUE
+
+Raw Material Cause:
+Carbon High
+
+Process Cause:
+Mixing Variation
+
+Machine Cause:
+Oil Flow Issue
+
+Tyre Impact:
+Heat Build Up`;
+
+}
+
+else{
+
+answer=
+`Query not found.
+
+Try:
+
+Mooney High
+Specific Gravity High
+Torque High`;
+
+}
+
+document.getElementById("answer")
+.innerHTML=answer;
 
 }
 
