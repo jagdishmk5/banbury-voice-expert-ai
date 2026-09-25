@@ -11,29 +11,25 @@ function getBanburyAnswer(question) {
     for (const phrase of dictionary[topic]) {
 
       if (question.includes(phrase.toLowerCase())) {
-        
-     
-        if (currentLanguage === "hi" &&
-            typeof knowledgeBaseHindi !== "undefined" &&
-            knowledgeBaseHindi[topic]) {
 
-      
-        return knowledgeBaseHindi[topic];
-
+        if (
+          currentLanguage === "hi" &&
+          typeof knowledgeBaseHindi !== "undefined" &&
+          knowledgeBaseHindi[topic]
+        ) {
+          return knowledgeBaseHindi[topic];
         }
 
-         if (
-currentLanguage === "mr" &&
-typeof knowledgeBaseMarathi !== "undefined" &&
-knowledgeBaseMarathi[topic]
-) {
-           return knowledgeBaseMarathi[topic];
-         }
+        if (
+          currentLanguage === "mr" &&
+          typeof knowledgeBaseMarathi !== "undefined" &&
+          knowledgeBaseMarathi[topic]
+        ) {
+          return knowledgeBaseMarathi[topic];
+        }
 
         if (knowledgeBase[topic]) {
-
           return knowledgeBase[topic];
-
         }
 
       }
@@ -52,6 +48,21 @@ knowledgeBaseMarathi[topic]
 Banbury AI समस्या पहचान नहीं सका
 
 विश्वास स्तर:
+0%
+`;
+
+  }
+
+  if (currentLanguage === "mr") {
+
+    return `
+समस्या:
+ओळखता आली नाही
+
+संदेश:
+Banbury AI समस्या ओळखू शकला नाही
+
+विश्वास पातळी:
 0%
 `;
 
