@@ -6,6 +6,8 @@ function getBanburyAnswer(question) {
 
   question = question.toLowerCase();
 
+  let results = [];
+
   for (const topic in dictionary) {
 
     for (const phrase of dictionary[topic]) {
@@ -17,7 +19,10 @@ function getBanburyAnswer(question) {
           typeof knowledgeBaseHindi !== "undefined" &&
           knowledgeBaseHindi[topic]
         ) {
-          return knowledgeBaseHindi[topic];
+
+          results.push(knowledgeBaseHindi[topic]);
+          break;
+
         }
 
         if (
@@ -25,11 +30,17 @@ function getBanburyAnswer(question) {
           typeof knowledgeBaseMarathi !== "undefined" &&
           knowledgeBaseMarathi[topic]
         ) {
-          return knowledgeBaseMarathi[topic];
+
+          results.push(knowledgeBaseMarathi[topic]);
+          break;
+
         }
 
         if (knowledgeBase[topic]) {
-          return knowledgeBase[topic];
+
+          results.push(knowledgeBase[topic]);
+          break;
+
         }
 
       }
@@ -38,14 +49,17 @@ function getBanburyAnswer(question) {
 
   }
 
+  if (results.length > 0) {
+
+    return results.join("\n\n================================\n\n");
+
+  }
+
   if (currentLanguage === "hi") {
 
     return `
 समस्या:
 पहचानी नहीं गई
-
-संदेश:
-Banbury AI समस्या पहचान नहीं सका
 
 विश्वास स्तर:
 0%
@@ -59,9 +73,6 @@ Banbury AI समस्या पहचान नहीं सका
 समस्या:
 ओळखता आली नाही
 
-संदेश:
-Banbury AI समस्या ओळखू शकला नाही
-
 विश्वास पातळी:
 0%
 `;
@@ -71,9 +82,6 @@ Banbury AI समस्या ओळखू शकला नाही
   return `
 PROBLEM:
 Not Identified
-
-MESSAGE:
-Banbury AI could not identify the problem.
 
 CONFIDENCE:
 0%
