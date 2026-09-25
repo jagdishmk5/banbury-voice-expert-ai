@@ -1,5 +1,5 @@
 function getBanburyAnswer(question){
 
-return "ENGINE WORKING";
+return dictionary ? "DICTIONARY FOUND" : "DICTIONARY NOT FOUND";
 
 }
