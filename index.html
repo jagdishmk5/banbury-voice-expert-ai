@@ -4,6 +4,7 @@
 <title>Banbury Voice Expert AI Pro</title>
 
 <style>
+
 body{
 font-family:Arial;
 background:#f4f7fa;
@@ -27,6 +28,7 @@ background:#0078d4;
 color:white;
 border:none;
 border-radius:8px;
+cursor:pointer;
 }
 
 input{
@@ -43,6 +45,7 @@ border-radius:8px;
 white-space:pre-line;
 text-align:left;
 }
+
 </style>
 
 </head>
@@ -68,7 +71,7 @@ text-align:left;
 <input
 type="text"
 id="question"
-placeholder="Example : Mooney High">
+placeholder="Example : Compound hard hai">
 
 <br>
 
@@ -115,138 +118,69 @@ window.webkitSpeechRecognition;
 const recognition =
 new SpeechRecognition();
 
-recognition.lang="hi-IN";
+recognition.lang = "hi-IN";
 
 recognition.start();
 
-recognition.onresult=function(event){
+recognition.onresult = function(event){
 
-let text=
+let text =
 event.results[0][0].transcript;
 
-document.getElementById("result")
-.innerHTML=text;
+document.getElementById("result").innerHTML = text;
 
-document.getElementById("question")
-.value=text;
+document.getElementById("question").value = text;
+
+/* Auto Analyze */
+analyzeBanbury();
+
+/* Auto Speak */
+setTimeout(function(){
+speakAnswer();
+},500);
 
 };
 
 }
 
 function analyzeBanbury(){
- 
+
 let question =
 document.getElementById("question").value;
- 
+
 let answer =
 getBanburyAnswer(question);
- 
-document.getElementById("answer")
-.innerHTML = answer;
- 
-}
 
-let question=
-document.getElementById("question")
-.value
-.toLowerCase();
-
-let answer="";
-
-if(question.includes("mooney")
-|| question.includes("viscosity")){
-
-answer=
-`MOONEY / VISCOSITY
-
-Compound Hold Reason:
-Mooney Out Of Specification
-
-Raw Material Cause:
-Process Oil Low
-
-Process Cause:
-Low Dump Temperature
-
-Machine Cause:
-Oil Pump Issue
-
-Tyre Impact:
-Heat Build Up
-
-Corrective Action:
-Check Oil Dosing`;
+document.getElementById("answer").innerHTML =
+answer;
 
 }
 
-else if(question.includes("specific gravity")
-|| question.includes("sg")){
+function speakAnswer(){
 
-answer=
-`SPECIFIC GRAVITY
+let text =
+document.getElementById("answer").innerText;
 
-Compound Hold Reason:
-SG Out Of Specification
+if(text.trim() === "") return;
 
-Raw Material Cause:
-Carbon Black High
+window.speechSynthesis.cancel();
 
-Process Cause:
-Wrong Weighment
+let speech =
+new SpeechSynthesisUtterance(text);
 
-Machine Cause:
-Load Cell Error
+speech.lang = "en-IN";
+speech.rate = 1;
+speech.pitch = 1;
 
-Tyre Impact:
-Higher Hardness
-
-Corrective Action:
-Check Carbon Addition`;
-
-}
-
-else if(question.includes("torque")){
-
-answer=
-`TORQUE
-
-Raw Material Cause:
-Carbon High
-
-Process Cause:
-Mixing Variation
-
-Machine Cause:
-Oil Flow Issue
-
-Tyre Impact:
-Heat Build Up`;
-
-}
-
-else{
-
-answer=
-`Query not found.
-
-Try:
-
-Mooney High
-Specific Gravity High
-Torque High`;
-
-}
-
-document.getElementById("answer")
-.innerHTML=answer;
+window.speechSynthesis.speak(speech);
 
 }
 
 </script>
+
 dictionary.jsscript>
 <script src="knowledge.js"></script>
 <script src="engine.js"></script>
-  
+
 </body>
 </html>
