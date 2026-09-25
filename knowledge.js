@@ -31,6 +31,12 @@ Check Oil Dosing
 PREVENTIVE ACTION:
 Recipe Verification
 
+REWORK POSSIBILITY:
+Possible
+
+SCRAP RISK:
+Low
+
 CONFIDENCE:
 85%
 `,
@@ -60,6 +66,12 @@ Low Wear Resistance
 
 CORRECTIVE ACTION:
 Check Oil Addition
+
+REWORK POSSIBILITY:
+Possible
+
+SCRAP RISK:
+Low
 
 CONFIDENCE:
 84%
@@ -123,6 +135,35 @@ CONFIDENCE:
 88%
 `,
 
+mooney_low: `
+PROBLEM:
+Mooney Low
+
+COMPOUND HOLD REASON:
+Mooney Below Specification
+
+RAW MATERIAL CAUSE:
+Oil High
+
+PROCESS CAUSE:
+High Dump Temperature
+
+MACHINE CAUSE:
+Oil Control Issue
+
+QUALITY IMPACT:
+Soft Compound
+
+TYRE IMPACT:
+Low Handling Stability
+
+CORRECTIVE ACTION:
+Check Oil Addition
+
+CONFIDENCE:
+82%
+`,
+
 dispersion_poor: `
 PROBLEM:
 Poor Dispersion
@@ -141,6 +182,7 @@ Non Uniform Compound
 
 TYRE IMPACT:
 Crack Risk
+Poor Mileage
 
 CORRECTIVE ACTION:
 Check Mixing Time
@@ -174,6 +216,12 @@ Verify Cure Package
 
 CONFIDENCE:
 90%
-`
+`,
 
-};
+torque_high: `
+PROBLEM:
+Torque High
+
+RAW MATERIAL CAUSE:
+Carbon Black High
+
