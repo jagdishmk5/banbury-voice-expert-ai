@@ -233,4 +233,7 @@ rework: [
 scrap: [
 "scrap",
 "scrapped batch",
-"rejected
+"rejected batch"
+]
+ 
+};
