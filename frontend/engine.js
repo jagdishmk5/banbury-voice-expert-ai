@@ -17,8 +17,13 @@ function getBanburyAnswer(question) {
             typeof knowledgeBaseHindi !== "undefined" &&
             knowledgeBaseHindi[topic]) {
 
-          console.log("Hindi KB Used");
+  if (
+currentLanguage === "mr" &&
+typeof knowledgeBaseMarathi !== "undefined" &&
+knowledgeBaseMarathi[topic]
+) {
 
+       
           return knowledgeBaseHindi[topic];
 
         }
