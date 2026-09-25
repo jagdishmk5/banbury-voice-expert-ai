@@ -7,12 +7,19 @@ function getBanburyAnswer(question) {
   question = question.toLowerCase();
 
   let results = [];
+  let matchedTopics = [];
 
   for (const topic in dictionary) {
 
     for (const phrase of dictionary[topic]) {
 
       if (question.includes(phrase.toLowerCase())) {
+
+        if (matchedTopics.includes(topic)) {
+          break;
+        }
+
+        matchedTopics.push(topic);
 
         if (
           currentLanguage === "hi" &&
@@ -51,7 +58,9 @@ function getBanburyAnswer(question) {
 
   if (results.length > 0) {
 
-    return results.join("\n\n================================\n\n");
+    return results.join(
+      "\n\n================================\n\n"
+    );
 
   }
 
