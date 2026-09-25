@@ -30,3 +30,7 @@ MESSAGE:
 Banbury AI could not identify the problem.
 
 CONFIDENCE:
+0%
+`;
+
+}
