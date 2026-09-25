@@ -1,3 +1,3 @@
-function getBanburyAnswer(question) {
+window.getBanburyAnswer = function () {
     return "ENGINE OK";
-}
+};
