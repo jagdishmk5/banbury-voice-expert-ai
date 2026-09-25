@@ -198,6 +198,134 @@ Verify Cure Package
 
 CONFIDENCE:
 90%
+`,
+
+  rheometer: `
+PROBLEM:
+Rheometer / MDR Out
+
+...
+
+CONFIDENCE:
+90%
+`,
+
+mooney_low: `
+PROBLEM:
+Mooney Low
+
+COMPOUND HOLD REASON:
+Mooney Below Specification
+
+RAW MATERIAL CAUSE:
+Process Oil High
+
+PROCESS CAUSE:
+High Dump Temperature
+
+MACHINE CAUSE:
+Oil Control Issue
+
+QUALITY IMPACT:
+Soft Compound
+
+TYRE IMPACT:
+Low Handling Stability
+
+CORRECTIVE ACTION:
+Check Oil Addition
+
+CONFIDENCE:
+82%
+`,
+
+torque_high: `
+PROBLEM:
+Torque High
+
+COMPOUND HOLD REASON:
+High Cure State
+
+RAW MATERIAL CAUSE:
+High Carbon Black
+High Sulphur
+
+PROCESS CAUSE:
+Recipe Variation
+
+MACHINE CAUSE:
+Dosing Error
+
+QUALITY IMPACT:
+Hard Compound
+
+TYRE IMPACT:
+Heat Build Up
+
+CORRECTIVE ACTION:
+Check Recipe Accuracy
+
+CONFIDENCE:
+86%
+`,
+
+torque_low: `
+PROBLEM:
+Torque Low
+
+COMPOUND HOLD REASON:
+Low Cure State
+
+RAW MATERIAL CAUSE:
+Low Carbon Black
+Low Sulphur
+
+PROCESS CAUSE:
+Mixing Variation
+
+MACHINE CAUSE:
+Dosing Issue
+
+QUALITY IMPACT:
+Weak Compound
+
+TYRE IMPACT:
+Reduced Durability
+
+CORRECTIVE ACTION:
+Verify Ingredients
+
+CONFIDENCE:
+83%
+`,
+
+scorch: `
+PROBLEM:
+Scorch Variation
+
+COMPOUND HOLD REASON:
+Premature Vulcanization Risk
+
+RAW MATERIAL CAUSE:
+Accelerator Variation
+
+PROCESS CAUSE:
+Temperature Variation
+
+MACHINE CAUSE:
+Temperature Control Issue
+
+QUALITY IMPACT:
+Poor Processing
+
+TYRE IMPACT:
+Manufacturing Difficulty
+
+CORRECTIVE ACTION:
+Check Cure Package
+
+CONFIDENCE:
+84%
 `
 
 };
