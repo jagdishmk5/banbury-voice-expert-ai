@@ -9,7 +9,7 @@ hardness_high: [
 "hard compound",
 "compound kadak",
 "rubber kadak",
-  "कंपाउंड हार्ड",
+"कंपाउंड हार्ड",
 "हार्ड कंपाउंड",
 "रबर हार्ड",
 "कंपाउंड कड़क"
@@ -23,7 +23,7 @@ hardness_low: [
 "sheet soft",
 "rubber naram",
 "compound naram",
-  "कंपाउंड सॉफ्ट",
+"कंपाउंड सॉफ्ट",
 "सॉफ्ट कंपाउंड",
 "रबर सॉफ्ट",
 "कंपाउंड नरम"
@@ -49,7 +49,7 @@ mooney_high: [
 "flow problem",
 "process problem",
 "high viscosity",
-  "मोनी हाई",
+"मोनी हाई",
 "विस्कोसिटी हाई"
 ],
 
@@ -58,7 +58,7 @@ mooney_low: [
 "viscosity low",
 "material very soft",
 "rubber flow high",
-  "मोनी लो",
+"मोनी लो",
 "विस्कोसिटी लो"
 ],
 
@@ -80,7 +80,7 @@ rheometer: [
 "cure problem",
 "cure out",
 "cure issue",
-  "रिओ फेल",
+"रिओ फेल",
 "एमडीआर फेल",
 "क्योर प्रॉब्लम"
 ],
@@ -186,69 +186,52 @@ scorch: [
 "scorch low"
 ],
 
-tensile: [
-"tensile",
+tensile_low: [
 "tensile low",
-"tensile high"
+"low tensile",
+"strength low"
 ],
 
-elongation: [
-"elongation",
+tensile_high: [
+"tensile high",
+"high tensile",
+"strength high"
+],
+
+elongation_low: [
 "elongation low",
-"elongation high"
+"low elongation",
+"stretch low"
 ],
 
-ash: [
-"ash",
+elongation_high: [
+"elongation high",
+"high elongation",
+"stretch high"
+],
+
+ash_high: [
 "ash high",
-"ash low"
+"high ash"
 ],
 
-sulphur: [
-"sulphur",
-"sulfur",
+ash_low: [
+"ash low",
+"low ash"
+],
+
+sulphur_high: [
 "sulphur high",
-"sulphur low"
+"sulfur high"
+],
+
+sulphur_low: [
+"sulphur low",
+"sulfur low"
 ],
 
 accelerator: [
 "accelerator",
 "cbs",
 "tbbs",
-"tmtd",
-"dpg"
-],
-
-nr: [
-"nr",
-"natural rubber"
-],
-
-sbr: [
-"sbr"
-],
-
-br: [
-"br",
-"butadiene rubber"
-],
-
-batch_hold: [
-"batch hold",
-"compound hold",
-"hold batch"
-],
-
-rework: [
-"rework",
-"reprocessing",
-"reworked batch"
-],
-
-scrap: [
-"scrap",
-"scrapped batch",
-"rejected batch"
-]
- 
-};
+"tmtd"
