@@ -135,6 +135,17 @@ document.getElementById("question")
 }
 
 function analyzeBanbury(){
+ 
+let question =
+document.getElementById("question").value;
+ 
+let answer =
+getBanburyAnswer(question);
+ 
+document.getElementById("answer")
+.innerHTML = answer;
+ 
+}
 
 let question=
 document.getElementById("question")
@@ -233,6 +244,9 @@ document.getElementById("answer")
 }
 
 </script>
-
+dictionary.jsscript>
+<script src="knowledge.js"></script>
+<script src="engine.js"></script>
+  
 </body>
 </html>
