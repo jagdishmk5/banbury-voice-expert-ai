@@ -158,28 +158,24 @@ speakAnswer();
 
 }
 
-function speakAnswer() {
+function speakAnswer(){
 
 let text =
 document.getElementById("answer").innerText;
 
-if (!text) return;
+if(!text) return;
 
 window.speechSynthesis.cancel();
-
-setTimeout(function(){
 
 let speech =
 new SpeechSynthesisUtterance(text);
 
 speech.lang = "en-US";
-speech.rate = 0.9;
+speech.rate = 1;
 speech.pitch = 1;
 speech.volume = 1;
 
 window.speechSynthesis.speak(speech);
-
-}, 300);
 
 }
 
