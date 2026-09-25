@@ -1,0 +1,7 @@
+Banbury AI V2 Stable Backup
+ 
+Voice Working
+Typing Working
+Homepage Working
+ 
+Backup Before Dictionary Engine Upgrade
