@@ -22,7 +22,7 @@ function getBanburyAnswer(question) {
 
   }
 
-  return '
+  return 
 PROBLEM:
 Not Identified
 
@@ -31,5 +31,5 @@ Banbury AI could not identify the problem.
 
 CONFIDENCE:
 0%
-';
+;
 }
