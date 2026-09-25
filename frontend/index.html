@@ -185,7 +185,26 @@ window.speechSynthesis.cancel();
 let speech =
 new SpeechSynthesisUtterance(text);
 
+sif(currentLanguage === "hi"){
+speech.lang = "hi-IN";
+}
+
+if(currentLanguage === "en"){
 speech.lang = "en-US";
+}
+
+if(currentLanguage === "mr"){
+speech.lang = "mr-IN";
+}
+
+if(currentLanguage === "te"){
+speech.lang = "te-IN";
+}
+
+if(currentLanguage === "ta"){
+speech.lang = "ta-IN";
+}
+  
 speech.rate = 1;
 speech.pitch = 1;
 speech.volume = 1;
