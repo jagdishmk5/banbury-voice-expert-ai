@@ -12,10 +12,7 @@ function getBanburyAnswer(question) {
 
       if (question.includes(phrase.toLowerCase())) {
         
-        console.log("Language =", currentLanguage);
-console.log("Topic =", topic);
-console.log("Hindi KB =", knowledgeBaseHindi[topic]);
-
+     
         if (currentLanguage === "hi" &&
             typeof knowledgeBaseHindi !== "undefined" &&
             knowledgeBaseHindi[topic]) {
