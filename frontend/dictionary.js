@@ -8,7 +8,11 @@ hardness_high: [
 "sheet hard",
 "hard compound",
 "compound kadak",
-"rubber kadak"
+"rubber kadak",
+  "कंपाउंड हार्ड",
+"हार्ड कंपाउंड",
+"रबर हार्ड",
+"कंपाउंड कड़क"
 ],
 
 hardness_low: [
@@ -18,7 +22,11 @@ hardness_low: [
 "soft compound",
 "sheet soft",
 "rubber naram",
-"compound naram"
+"compound naram",
+  "कंपाउंड सॉफ्ट",
+"सॉफ्ट कंपाउंड",
+"रबर सॉफ्ट",
+"कंपाउंड नरम"
 ],
 
 specific_gravity: [
@@ -40,14 +48,18 @@ mooney_high: [
 "compound process problem",
 "flow problem",
 "process problem",
-"high viscosity"
+"high viscosity",
+  "मोनी हाई",
+"विस्कोसिटी हाई"
 ],
 
 mooney_low: [
 "mooney low",
 "viscosity low",
 "material very soft",
-"rubber flow high"
+"rubber flow high",
+  "मोनी लो",
+"विस्कोसिटी लो"
 ],
 
 dispersion_poor: [
@@ -67,7 +79,10 @@ rheometer: [
 "mdr fail",
 "cure problem",
 "cure out",
-"cure issue"
+"cure issue",
+  "रिओ फेल",
+"एमडीआर फेल",
+"क्योर प्रॉब्लम"
 ],
 
 torque_high: [
