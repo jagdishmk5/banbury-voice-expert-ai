@@ -40,20 +40,6 @@ PROBLEM:
 Rheometer / MDR Out
 CONFIDENCE:
 90%
-`,
-
-torque_high: `
-PROBLEM:
-Torque High
-CONFIDENCE:
-86%
-`,
-
-torque_low: `
-PROBLEM:
-Torque Low
-CONFIDENCE:
-83%
 `
 
 };
