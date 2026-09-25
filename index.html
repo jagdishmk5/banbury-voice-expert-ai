@@ -6,19 +6,37 @@
 
 <body>
 
-<h1>Banbury Voice Expert AI</h1>
+<h1>🎤 Banbury Voice Expert AI</h1>
 
-<button onclick="sayHello()">
-Start Voice
+<button onclick="startVoice()">
+🎤 Start Voice
 </button>
 
-<p id="result"></p>
+<p id="result">Speak something...</p>
 
 <script>
-function sayHello() {
- document.getElementById("result").innerHTML =
- "Voice system working";
+
+function startVoice() {
+
+const SpeechRecognition =
+window.SpeechRecognition ||
+window.webkitSpeechRecognition;
+
+const recognition = new SpeechRecognition();
+
+recognition.lang = "hi-IN";
+
+recognition.start();
+
+recognition.onresult = function(event) {
+
+document.getElementById("result").innerHTML =
+event.results[0][0].transcript;
+
+};
+
 }
+
 </script>
 
 </body>
