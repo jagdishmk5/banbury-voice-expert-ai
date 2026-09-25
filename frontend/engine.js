@@ -22,7 +22,7 @@ function getBanburyAnswer(question) {
 
   }
 
-  return `
+  return
 PROBLEM:
 Not Identified
 
