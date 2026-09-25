@@ -17,16 +17,18 @@ function getBanburyAnswer(question) {
             typeof knowledgeBaseHindi !== "undefined" &&
             knowledgeBaseHindi[topic]) {
 
-  if (
+      
+        return knowledgeBaseHindi[topic];
+
+        }
+
+         if (
 currentLanguage === "mr" &&
 typeof knowledgeBaseMarathi !== "undefined" &&
 knowledgeBaseMarathi[topic]
 ) {
-
-       
-          return knowledgeBaseHindi[topic];
-
-        }
+           return knowledgeBaseMarathi[topic];
+         }
 
         if (knowledgeBase[topic]) {
 
