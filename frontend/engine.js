@@ -1,31 +1,28 @@
-function getBanburyAnswer(question){
+function getBanburyAnswer(question) {
 
-if(!question){
-return "Please enter a question";
-}
+  if (!question) {
+    return "Please enter a question";
+  }
 
-question = question.toLowerCase();
+  question = question.toLowerCase();
 
-for(const topic in dictionary){
+  for (const topic in dictionary) {
 
-for(const phrase of dictionary[topic]){
+    for (const phrase of dictionary[topic]) {
 
-if(question.includes(phrase.toLowerCase())){
+      if (question.includes(phrase.toLowerCase())) {
 
-if(
-typeof knowledgeBase !== "undefined" &&
-knowledgeBase[topic]
-){
-return knowledgeBase[topic];
-}
+        if (knowledgeBase[topic]) {
+          return knowledgeBase[topic];
+        }
 
-}
+      }
 
-}
+    }
 
-}
+  }
 
-return `
+  return `
 PROBLEM:
 Not Identified
 
@@ -35,5 +32,4 @@ Banbury AI could not identify the problem.
 CONFIDENCE:
 0%
 `;
-
 }
