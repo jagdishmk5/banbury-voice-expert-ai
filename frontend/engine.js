@@ -1,3 +1,39 @@
 function getBanburyAnswer(question){
- 
-return JSON.stringify(Object.keys(knowledgeBase
+
+if(!question){
+return "Please enter a question";
+}
+
+question = question.toLowerCase();
+
+for(const topic in dictionary){
+
+for(const phrase of dictionary[topic]){
+
+if(question.includes(phrase.toLowerCase())){
+
+if(
+typeof knowledgeBase !== "undefined" &&
+knowledgeBase[topic]
+){
+return knowledgeBase[topic];
+}
+
+}
+
+}
+
+}
+
+return `
+PROBLEM:
+Not Identified
+
+MESSAGE:
+Banbury AI could not identify the problem.
+
+CONFIDENCE:
+0%
+`;
+
+}
