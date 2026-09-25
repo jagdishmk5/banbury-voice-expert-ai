@@ -12,8 +12,8 @@ function getBanburyAnswer(question) {
 
       if (question.includes(phrase.toLowerCase())) {
 
-        if (knowledge[topic]) {
-          return knowledge[topic];
+        if (knowledgeBase[topic]) {
+          return knowledgeBase[topic];
         }
 
       }
@@ -22,14 +22,5 @@ function getBanburyAnswer(question) {
 
   }
 
-  return '
-PROBLEM:
-Not Identified
-
-MESSAGE:
-Banbury AI could not identify the problem.
-
-CONFIDENCE:
-0%
-';
+  return "PROBLEM:\nNot Identified\n\nMESSAGE:\nBanbury AI could not identify the problem.\n\nCONFIDENCE:\n0%;
 }
