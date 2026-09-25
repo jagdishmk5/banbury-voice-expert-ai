@@ -114,6 +114,7 @@ Ask a Banbury Question
 <script src="./dictionary.js"></script>
 <script src="./knowledge.js"></script>
 <script src="./engine.js"></script>
+<script src="./translations.js"></script>
   
 <script>
 
@@ -168,11 +169,30 @@ document.getElementById("question").value;
 let answer =
 getBanburyAnswer(question);
 
+if(
+currentLanguage !== "en" &&
+translations[currentLanguage]
+){
+
+answer =
+answer.replaceAll(
+"PROBLEM",
+translations[currentLanguage].problem
+);
+
+answer =
+answer.replaceAll(
+"CONFIDENCE",
+translations[currentLanguage].confidence
+);
+
+}
+
 document.getElementById("answer").innerHTML =
 answer;
 
 }
-
+  
 function speakAnswer(){
 
 let text =
