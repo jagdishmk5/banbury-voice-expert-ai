@@ -326,6 +326,10 @@ Check Cure Package
 
 CONFIDENCE:
 84%
-`
+`,
+tensile_low: [
+"tensile low",
+"low tensile",
+"strength low"
+],
 
-};
