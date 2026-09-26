@@ -237,5 +237,38 @@ accelerator: [
 
 "tmtd"
 
-
-  };
+],
+ 
+nr: [
+"nr",
+"natural rubber"
+],
+ 
+sbr: [
+"sbr"
+],
+ 
+br: [
+"br",
+"butadiene rubber"
+],
+ 
+batch_hold: [
+"batch hold",
+"compound hold",
+"hold batch"
+],
+ 
+rework: [
+"rework",
+"reprocessing",
+"reworked batch"
+],
+ 
+scrap: [
+"scrap",
+"scrap risk",
+"scrapped batch",
+"rejected batch"
+]
+ 
