@@ -234,9 +234,8 @@ accelerator: [
 "accelerator",
 "cbs",
 "tbbs",
-
-"tmtd"
-
+"tmtd",
+"dpg"
 ],
  
 nr: [
@@ -270,5 +269,7 @@ scrap: [
 "scrap risk",
 "scrapped batch",
 "rejected batch"
-];
+  ]
+  
+  };
  
