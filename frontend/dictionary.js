@@ -270,4 +270,4 @@ scrap: [
 "rejected batch"
   ]  
 
-};
+}
