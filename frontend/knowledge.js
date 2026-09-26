@@ -200,16 +200,6 @@ CONFIDENCE:
 90%
 `,
 
-  rheometer: `
-PROBLEM:
-Rheometer / MDR Out
-
-...
-
-CONFIDENCE:
-90%
-`,
-
 mooney_low: `
 PROBLEM:
 Mooney Low
@@ -327,9 +317,6 @@ Check Cure Package
 CONFIDENCE:
 84%
 `,
-tensile_low: [
-"tensile low",
-"low tensile",
-"strength low"
-],
+
+};
 
