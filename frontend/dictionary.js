@@ -269,5 +269,5 @@ scrap: [
 "scrapped batch",
 "rejected batch"
   ]  
-  };
- 
+
+};
