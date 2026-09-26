@@ -317,6 +317,193 @@ Check Cure Package
 CONFIDENCE:
 84%
 `,
+  tensile_low: `
+PROBLEM:
+Tensile Low
+ 
+COMPOUND HOLD REASON:
+Low Tensile Strength
+ 
+RAW MATERIAL CAUSE:
+Carbon Black Low
+Polymer Variation
+ 
+PROCESS CAUSE:
+Poor Dispersion
+ 
+QUALITY IMPACT:
+Weak Compound
+ 
+TYRE IMPACT:
+Reduced Strength
+ 
+CORRECTIVE ACTION:
+Check Mixing Quality
+ 
+CONFIDENCE:
+87%
+`,
+ 
+tensile_high: `
+PROBLEM:
+Tensile High
+ 
+COMPOUND HOLD REASON:
+Tensile Above Specification
+ 
+RAW MATERIAL CAUSE:
+Carbon Black High
+ 
+QUALITY IMPACT:
+Hard Compound
+ 
+CORRECTIVE ACTION:
+Verify Recipe
+ 
+CONFIDENCE:
+86%
+`,
+ 
+elongation_low: `
+PROBLEM:
+Elongation Low
+ 
+COMPOUND HOLD REASON:
+Poor Stretchability
+ 
+QUALITY IMPACT:
+Brittle Compound
+ 
+TYRE IMPACT:
+Crack Risk
+ 
+CORRECTIVE ACTION:
+Check Carbon Black Loading
+ 
+CONFIDENCE:
+85%
+`,
+ 
+elongation_high: `
+PROBLEM:
+Elongation High
+ 
+COMPOUND HOLD REASON:
+Stretchability Above Specification
+ 
+RAW MATERIAL CAUSE:
+Process Oil High
+ 
+QUALITY IMPACT:
+Soft Compound
+ 
+CORRECTIVE ACTION:
+Check Oil Addition
+ 
+CONFIDENCE:
+84%
+`,
+ 
+ash_high: `
+PROBLEM:
+Ash High
+ 
+COMPOUND HOLD REASON:
+Ash Content Above Specification
+ 
+RAW MATERIAL CAUSE:
+Material Contamination
+ 
+CORRECTIVE ACTION:
+Check Raw Material
+ 
+CONFIDENCE:
+83%
+`,
+ 
+ash_low: `
+PROBLEM:
+Ash Low
+ 
+COMPOUND HOLD REASON:
+Ash Content Below Specification
+ 
+CONFIDENCE:
+82%
+`,
+ 
+sulphur_high: `
+PROBLEM:
+Sulphur High
+ 
+COMPOUND HOLD REASON:
+Sulphur Above Specification
+ 
+QUALITY IMPACT:
+Over Cure Risk
+ 
+CORRECTIVE ACTION:
+Verify Sulphur Dosing
+ 
+CONFIDENCE:
+88%
+`,
+ 
+sulphur_low: `
+PROBLEM:
+Sulphur Low
+ 
+COMPOUND HOLD REASON:
+Sulphur Below Specification
+ 
+QUALITY IMPACT:
+Under Cure Risk
+ 
+CORRECTIVE ACTION:
+Verify Sulphur Dosing
+ 
+CONFIDENCE:
+87%
+`,
+ 
+batch_hold: `
+PROBLEM:
+Batch Hold
+ 
+COMPOUND HOLD REASON:
+Quality Parameter Out Of Specification
+ 
+ACTION:
+Review Lab Results
+ 
+CONFIDENCE:
+95%
+`,
+ 
+rework: `
+PROBLEM:
+Rework Required
+ 
+ACTION:
+Evaluate Reprocessing Feasibility
+ 
+CONFIDENCE:
+93%
+`,
+ 
+scrap: `
+PROBLEM:
+Scrap Risk
+ 
+COMPOUND HOLD REASON:
+Critical Quality Failure
+ 
+SCRAP RISK:
+High
+ 
+CONFIDENCE:
+96%
+`,
 
 };
 
