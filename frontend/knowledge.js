@@ -504,6 +504,152 @@ High
 CONFIDENCE:
 96%
 `,
+  carbon_black: `
+PROBLEM:
+Carbon Black Variation
+
+COMPOUND HOLD REASON:
+Carbon Black Above/Below Specification
+
+RAW MATERIAL CAUSE:
+Incorrect Carbon Black Addition
+
+PROCESS CAUSE:
+Recipe Deviation
+
+QUALITY IMPACT:
+Hardness Variation
+Specific Gravity Variation
+
+TYRE IMPACT:
+Wear Performance Affected
+
+CORRECTIVE ACTION:
+Verify Carbon Black Dosing
+
+CONFIDENCE:
+90%
+`,
+
+process_oil: `
+PROBLEM:
+Process Oil Variation
+
+COMPOUND HOLD REASON:
+Process Oil Above/Below Specification
+
+RAW MATERIAL CAUSE:
+Oil Dosing Variation
+
+PROCESS CAUSE:
+Recipe Error
+
+QUALITY IMPACT:
+Mooney Variation
+Hardness Variation
+
+TYRE IMPACT:
+Handling Performance Affected
+
+CORRECTIVE ACTION:
+Check Oil Addition System
+
+CONFIDENCE:
+89%
+`,
+
+rotor_wear: `
+PROBLEM:
+Rotor Wear
+
+COMPOUND HOLD REASON:
+Rotor Efficiency Reduced
+
+PROCESS CAUSE:
+Poor Mixing Performance
+
+QUALITY IMPACT:
+Dispersion Issue
+
+TYRE IMPACT:
+Non Uniform Compound Quality
+
+CORRECTIVE ACTION:
+Inspect Rotor Condition
+
+CONFIDENCE:
+91%
+`,
+
+load_cell: `
+PROBLEM:
+Load Cell Error
+
+COMPOUND HOLD REASON:
+Incorrect Material Weighment
+
+PROCESS CAUSE:
+Weight Variation
+
+QUALITY IMPACT:
+Recipe Deviation
+
+TYRE IMPACT:
+Property Variation
+
+CORRECTIVE ACTION:
+Calibrate Load Cell
+
+CONFIDENCE:
+92%
+`,
+
+oil_pump: `
+PROBLEM:
+Oil Pump Issue
+
+COMPOUND HOLD REASON:
+Oil Flow Not Stable
+
+PROCESS CAUSE:
+Incorrect Oil Addition
+
+QUALITY IMPACT:
+Mooney Variation
+
+TYRE IMPACT:
+Compound Processing Issue
+
+CORRECTIVE ACTION:
+Check Oil Pump Performance
+
+CONFIDENCE:
+90%
+`,
+
+dump_temperature: `
+PROBLEM:
+Dump Temperature Variation
+
+COMPOUND HOLD REASON:
+Temperature Out Of Target Range
+
+PROCESS CAUSE:
+Mixing Energy Variation
+
+QUALITY IMPACT:
+Mooney Variation
+Dispersion Issue
+
+TYRE IMPACT:
+Cure And Performance Variation
+
+CORRECTIVE ACTION:
+Check Mixing Cycle Parameters
+
+CONFIDENCE:
+88%
+`,
 
 };
 
