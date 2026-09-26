@@ -270,5 +270,5 @@ scrap: [
 "scrap risk",
 "scrapped batch",
 "rejected batch"
-]
+];
  
