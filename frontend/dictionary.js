@@ -1,5 +1,4 @@
 const dictionary = {
-
 hardness_high: [
 "compound hard",
 "material hard",
